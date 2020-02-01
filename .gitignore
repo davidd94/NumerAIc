@@ -1,2 +1,4 @@
 **/MNIST
+**/node_modules
 **/.vscode
+*.code-workspace
