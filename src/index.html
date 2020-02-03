@@ -2,12 +2,13 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="deeplearning.ico" />
+    <link rel="icon" href="{{ url_for('static', filename='deeplearning.ico') }}" />
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>NumerAIc - Deep Learning</title>
   </head>
   <body>
     <div id="NumerAIc-root"></div>
-    <script type="text/javascript" src="bundle.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='bundle.js') }}"></script>
   </body>
 </html>

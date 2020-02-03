@@ -20,16 +20,13 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
+                use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.(jpe?g|gif|png|svg)$/i,
                 use: [
                     {
-                        loader: ['url-loader', 'file-loader'],
-                        options: {
-                            limit: 10000
-                        }
+                        loader: 'file-loader'
                     }
                 ]
             },

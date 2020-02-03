@@ -1,4 +1,6 @@
 **/MNIST
 **/node_modules
+**/user_numbers
+**/user_training_data
 **/.vscode
 *.code-workspace
