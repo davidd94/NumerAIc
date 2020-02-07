@@ -92,14 +92,12 @@ const StyledButtons = styled(Button)`
 `
 
 const StyledInput = styled(Input)`
+    ::-webkit-outer-spin-button,    
     ::-webkit-inner-spin-button{
         -webkit-appearance: none; 
         margin: 0; 
     };
-    ::-webkit-outer-spin-button{
-        -webkit-appearance: none; 
-        margin: 0; 
-    };
+    -moz-appearance: textfield;
 `
 
 const ImgProcessing1 = styled.div`

@@ -14,7 +14,7 @@ BATCH_SIZE = 100
 LEARNING_RATE = 0.001
 
 IMG_SIZE = 28
-MODEL_PATH = f'/Users/davidd/Web Apps/NumerAIc/NeuralNetwork'
+MODEL_PATH = f'{os.getcwd()}/NeuralNetwork'
 
 # Loss and optimizer
 #loss = nn.MSELoss()
