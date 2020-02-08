@@ -11,12 +11,13 @@ const HomepageContainer = () => {
     };
 
     const [userID, setUserID] = useState('');
-    const [mode, setMode] = useState('testing');
+    const [mode, setMode] = useState('');
     const [submitStatus, setSubmitStatus] = useState(false);
     const [trainStatus, setTrainStatus] = useState(false);
     const [trainResult, setTrainResult] = useState('');
     const [guess, setGuess] = useState('');
     const [trainCt, setTrainCt] = useState(0);
+    const [drawStatus, setDrawStatus] = useState(false);
     
     useEffect(() => {
         var randomUserID = Math.random().toString(36).substring(2, 16);
@@ -103,7 +104,7 @@ const HomepageContainer = () => {
             setTrainResult(sliced);
         };
     };
-
+    console.log(drawStatus);
     return (
         <>
             <HomepagePresent 
@@ -116,6 +117,8 @@ const HomepageContainer = () => {
                     mode={mode}
                     guess={guess}
                     trainCt={trainCt}
+                    drawStatus={drawStatus}
+                    setDrawStatus={setDrawStatus}
                     ref={refs} />
         </>
     );

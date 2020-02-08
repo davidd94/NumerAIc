@@ -207,6 +207,19 @@ const ResponseIncorrectSpan = styled.span`
     };
 `
 
+const CanvasAcceptText = styled.p`
+    cursor: pointer;
+    color: #18c100;
+    font-family: 'Orbitron, Arial, san-serif';
+    font-size: 18px;
+    margin: 30px 0 0 0;
+    transition: 300ms all ease;
+    :hover {
+        text-decoration: underline;
+        color: #5136d2;
+    };
+`
+
 const HomepageContainer = {
     main: {
         position: 'relative',
@@ -276,6 +289,27 @@ const HomepageContainer = {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         borderRadius: '10px',
+    },
+    canvasOverlay: {
+        position: 'absolute',
+        top: '43px',
+        left: '0',
+        width: '400px',
+        height: '400px',
+        zIndex: '900',
+        backgroundColor: 'rgba(21, 21, 21, 0.8)',
+        textAlign: 'center',
+        boxShadow: '0 3px 5x rgba(0, 0, 0, 0.3)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    canvasOverlayText: {
+        fontFamily: 'Orbitron, Arial, san-serif',
+        fontSize: '14px',
+        color: 'white',
+        margin: '30px 0',
+        textAlign: 'center',
     },
     processingImg1: {
         position: 'relative',
@@ -372,4 +406,5 @@ const HomepageContainer = {
 export { HomepageContainer, Clouds, StyledButtons,
         ImgProcessing1, ImgProcessing2, ImgProcessing3,
         ResponseIncorrectSpan, StyledInput,
-        ImgTraining1, ImgTraining2 };
+        ImgTraining1, ImgTraining2,
+        CanvasAcceptText, };
