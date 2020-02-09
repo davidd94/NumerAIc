@@ -3,4 +3,5 @@
 **/user_numbers
 **/user_training_data
 **/.vscode
+**/__pycache__
 *.code-workspace

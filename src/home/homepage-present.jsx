@@ -18,14 +18,15 @@ const HomepagePresent = forwardRef((props, ref) => {
             <div style={props.submitStatus || props.trainStatus ? {transform: 'scale(0)', opacity: '0'} : HomepageContainer.canvasContainer}>
                 <div style={HomepageContainer.canvasOptionBox}>
                     <StyledButtons color="secondary" onClick={() => {canvasRef.current.clear(); props.setDrawStatus(false);}}>Clear</StyledButtons>
-                    <StyledButtons color="secondary" onClick={() => canvasRef.current.undo()}>Undo</StyledButtons>
+                    <StyledButtons color="secondary" onClick={() => canvasRef.current.undo()} disabled={!props.drawStatus}>Undo</StyledButtons>
                     <StyledButtons color={props.mode === "testing" ? "primary" : "danger"}
                                    onClick={props.mode === "testing" ? () => props.setCanvasMode('training') : () => props.setCanvasMode('testing')}
                                    style={props.mode ? {} : {display: 'none'}}
                                    >{props.mode} <Badge color="secondary" style={props.mode === 'training'? {marginLeft: '3px'} : {display: 'none'}}>{props.trainCt}</Badge>
                     </StyledButtons>
                 </div>
-                <CanvasDraw ref={canvasRef}
+                <div style={HomepageContainer.canvasBox}>
+                    <CanvasDraw ref={canvasRef}
                             disabled={props.mode ? false : true}
                             lazyRadius={0}
                             brushRadius={10}
@@ -33,11 +34,12 @@ const HomepagePresent = forwardRef((props, ref) => {
                             gridColor={"#6df3ff"}
                             onChange={() => props.setDrawStatus(true)}
                             style={HomepageContainer.canvasBox} />
-                <div style={props.mode ? {display: 'none'} : HomepageContainer.canvasOverlay}>
-                    <div>
-                        <p style={HomepageContainer.canvasOverlayText}>Draw any single digit number between 0-9</p>
-                        <p style={HomepageContainer.canvasOverlayText}>Hint : <span style={{margin: '0 10px'}}>I can't count pass 10</span></p>
-                        <CanvasAcceptText onClick={() => props.setCanvasMode('testing')}>Continue</CanvasAcceptText>
+                    <div style={props.mode ? {display: 'none'} : HomepageContainer.canvasOverlay}>
+                        <div>
+                            <p style={HomepageContainer.canvasOverlayText}>Draw any single digit number between 0-9</p>
+                            <p style={HomepageContainer.canvasOverlayText}>Hint : <span style={{margin: '0 10px'}}>I can't count pass 10</span></p>
+                            <CanvasAcceptText onClick={() => props.setCanvasMode('testing')}>Continue</CanvasAcceptText>
+                        </div>
                     </div>
                 </div>
                 <div style={HomepageContainer.canvasSubmitBox}>

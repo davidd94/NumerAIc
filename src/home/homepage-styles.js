@@ -265,7 +265,7 @@ const HomepageContainer = {
     },
     canvasBox: {
         position: 'relative',
-        zIndex: 500,
+        zIndex: '500',
         backgroundColor: 'rgb(40, 1, 55)',
     },
     canvasImgContainer: {
@@ -292,7 +292,7 @@ const HomepageContainer = {
     },
     canvasOverlay: {
         position: 'absolute',
-        top: '43px',
+        top: '0',
         left: '0',
         width: '400px',
         height: '400px',
